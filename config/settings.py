@@ -90,23 +90,23 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # # }
 #
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'db_name', # Название БД
-#         'USER': 'postgres', # Пользователь для подключения
-#         'PASSWORD': 'secret', # Пароль для этого пользователя
-#
-#         'PORT': 5432, # Порт, на котором работает сервер БД
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Django_homework_proj', # Название БД
+        'USER': 'postgres', # Пользователь для подключения
+        'PASSWORD': '19otabek83', # Пароль для этого пользователя
+
+        'PORT': 5432, # Порт, на котором работает сервер БД
+    }
+}
 
 
 # Password validation

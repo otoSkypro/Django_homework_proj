@@ -90,32 +90,36 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # # }
 #
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'USER': 'postgres', # Пользователь для подключения
+        'PASSWORD': 'secret', # Пароль для этого пользователя
+        'HOST': 'localhost', # Адрес, на котором развернут сервер БД
+        'PORT': 5432, # Порт, на котором работает сервер БД
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'db_name', # Название БД
+#         'USER': 'postgres', # Пользователь для подключения
+#         'PASSWORD': 'secret', # Пароль для этого пользователя
+#         'HOST': 'localhost', # Адрес, на котором развернут сервер БД
+#         'PORT': 5432, # Порт, на котором работает сервер БД
 #     }
 # }
 
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'Django_homework_proj', # Название БД
-#         'USER': 'postgres', # Пользователь для подключения
-#         'PASSWORD': '19otabek83', # Пароль для этого пользователя
-#         'HOST': '127.0.0.1:8000', # Адрес, на котором развернут сервер БД
-#         'PORT': 5432, # Порт, на котором работает сервер БД
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'password'
 #     }
 # }
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'password'
-    }
-}
 
 
 
